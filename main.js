@@ -30,7 +30,7 @@ function escape(text) {
         const payload = github.context.payload;
         const repoName = payload.repository.name;
         const repoUrl = payload.repository.url;
-        const { ref, runId, workflow } = github.context;
+        const { ref, runId, workflow, job } = github.context;
         let statusIcon;
         switch (status) {
             case 'success': statusIcon = '✅'; break;
@@ -47,7 +47,7 @@ function escape(text) {
             const branchUrl = `${repoUrl}/tree/${branchName}`;
             const commitMessage = payload.head_commit.message;
             const commitAuthor = payload.head_commit.author.username;
-            let message = `${statusIcon} [${escape(repoName)}/${escape(branchName)}](${escape(branchUrl)}) ${escape(workflow)} *${escape(status)}*
+            let message = `${statusIcon} [${escape(repoName)}/${escape(branchName)}](${escape(branchUrl)}) ${escape(workflow)}/${escape(job)} *${escape(status)}*
 
 \`\`\`
 ${escape(commitMessage)}\`\`\` by [${escape(commitAuthor)}](http://github.com/${escape(commitAuthor)})
