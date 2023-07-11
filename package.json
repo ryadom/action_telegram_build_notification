@@ -1,5 +1,5 @@
 {
-  "name": "action_telegram_send_message",
+  "name": "action_telegram_build_notification",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryadom/action_telegram_send_message.git"
+    "url": "git+https://github.com/ryadom/action_telegram_build_notification.git"
   },
   "keywords": [],
   "author": "ryadom",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ryadom/action_telegram_send_message/issues"
+    "url": "https://github.com/ryadom/action_telegram_build_notification/issues"
   },
-  "homepage": "https://github.com/ryadom/action_telegram_send_message#readme",
+  "homepage": "https://github.com/ryadom/action_telegram_build_notification#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
