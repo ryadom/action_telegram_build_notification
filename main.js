@@ -38,7 +38,7 @@ function escape(text) {
             default: statusIcon = '⚠️'; break;
         }
         core.debug(JSON.stringify(payload));
-        if (github.context.eventName == 'push') {
+        if (github.context.eventName == 'push' || github.context.eventName == 'workflow_dispatch') {
             if (!ref.startsWith('refs/heads/')) {
                 core.setFailed(`can't parse ref ${ref}`);
                 return;
